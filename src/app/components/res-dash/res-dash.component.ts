@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { FormBuilder, FormGroup } from '@angular/forms';
 
 @Component({
   selector: 'app-res-dash',
@@ -6,10 +7,18 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./res-dash.component.scss']
 })
 export class ResDashComponent implements OnInit {
+  resFormGroup: FormGroup;
 
-  constructor() { }
+  constructor(private formBuilder: FormBuilder) { }
 
   ngOnInit() {
+    this.resFormGroup = this.formBuilder.group({
+      name: [''],
+      email: [''],
+      mobile: [''],
+      address: [''],
+      service: [''],
+    })
   }
 
 }
