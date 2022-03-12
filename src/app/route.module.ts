@@ -7,6 +7,10 @@ const route: Routes = [
   {
     path: '',
     component: ResDashComponent
+  },
+  {
+    path: 'home',
+    component: HomeComponent
   }
 ]
 
