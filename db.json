@@ -7,5 +7,12 @@
   ],
   "profile": {
     "name": "typicode"
+  },
+  "comments": {
+    {
+      "id": 1,
+      "body": "some comment",
+      "postid": 1
+    }
   }
 }
