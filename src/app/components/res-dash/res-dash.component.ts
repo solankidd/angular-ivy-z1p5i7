@@ -13,7 +13,7 @@ export class ResDashComponent implements OnInit {
 
   ngOnInit() {
     this.resFormGroup = this.formBuilder.group({
-      name: [''],
+      name: ['res'],
       email: [''],
       mobile: [''],
       address: [''],
