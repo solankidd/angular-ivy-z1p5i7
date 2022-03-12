@@ -8,11 +8,11 @@
   "profile": {
     "name": "typicode"
   },
-  "comments": {
+  "comments": [
     {
       "id": 1,
       "body": "some comment",
       "postid": 1
     }
-  }
+  ]
 }
