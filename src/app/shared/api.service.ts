@@ -6,7 +6,8 @@ import { Observable } from 'rxjs';
   providedIn: 'root'
 })
 export class ApiService {
-  url = 'https://my-json-server.typicode.com/solankidd/angular-ivy-z1p5i7/posts';
+  // url = 'https://my-json-server.typicode.com/typicode/demo/posts';
+  url = 'http://localhost:3000/posts';
   constructor(private http: HttpClient) { }
 
   postRes(data:any): Observable<any>{

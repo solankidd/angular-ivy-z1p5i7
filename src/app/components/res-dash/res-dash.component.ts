@@ -11,6 +11,8 @@ import { ResData, iResData } from '../../shared/res.model';
 export class ResDashComponent implements OnInit {
   resFormGroup: FormGroup;
   res: ResData = new ResData();
+  allResData: ResData[];
+  // allResData = Array<Object>;
   // res:iResData;
 
   constructor(
@@ -25,7 +27,8 @@ export class ResDashComponent implements OnInit {
       mobile: [''],
       address: [''],
       service: [''],
-    })
+    });
+    this.geRes();
 
     /* this.resFormGroup = new FormGroup({
       name: new FormControl('rrev')
@@ -38,9 +41,31 @@ export class ResDashComponent implements OnInit {
     this.res.email = this.resFormGroup.value.email;
     this.res.mobile = this.resFormGroup.value.mobile;
     this.res.services = this.resFormGroup.value.services;
-    this.api.postRes(this.res).subscribe( res => {
-      console.log(res);
-    })
+    this.api.postRes(this.res).subscribe({
+      next: (res) => {
+        console.log(res);
+        this.resFormGroup.reset();
+      },
+      error: (e) => {
+        console.error(e)
+      },
+      complete: () => {
+        console.log('complete');
+      } 
+    }) 
+  }
+
+  geRes() {
+    this.api.getRes().subscribe({
+      next: (res) => {
+        console.log(res);
+        this.allResData = res;
+      },
+      error: (e) => {
+        console.error(e)
+      }
+      
+    }) 
   }
 
 }
