@@ -1,6 +1,8 @@
-<form #loginForm="ngForm" (ngSubmit)="login(loginForm.value)">
-  <input type="text" #name="ngModel" name="name" ngModel required>
-  <span *ngIf="name.invalid && name.touched">please enter</span>
+<form #loginForm="ngForm" (ngSubmit)="login(loginForm.controls)">
+  <input type="text" #name="ngModel" name="name" email ngModel required>
+  <span *ngIf="name.invalid && name.dirty">please enter</span>
+  <br/>
+  {{name.errors?.required | json}}
   <br/>
   <input type="password" name="password" ngModel>
   <br/>

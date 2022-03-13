@@ -15,7 +15,7 @@ export class HomeComponent implements OnInit {
 
   login(form){
 
-    console.log(form.value.valid)
+    console.log(form['name'].markAsDirty()) 
   }
 
 }
