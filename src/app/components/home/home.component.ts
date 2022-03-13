@@ -14,7 +14,8 @@ export class HomeComponent implements OnInit {
   }
 
   login(form){
-    console.log(form)
+
+    console.log(form.value.valid)
   }
 
 }

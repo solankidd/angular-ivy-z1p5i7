@@ -1,8 +1,9 @@
 <form #loginForm="ngForm" (ngSubmit)="login(loginForm.value)">
-  <input type="text" name="name" ngModel>
+  <input type="text" #name="ngModel" name="name" ngModel required>
+  <span *ngIf="name.invalid && name.touched">please enter</span>
   <br/>
   <input type="password" name="password" ngModel>
   <br/>
   <button>Login</button>
 </form>
-<button (click)="login(loginForm.value)">Out</button>
+<button (click)="login(loginForm)">Out</button>
