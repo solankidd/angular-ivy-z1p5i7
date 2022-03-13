@@ -1,3 +1,8 @@
-<p>
-home works! 
-</p>
+<form #loginForm="ngForm" (ngSubmit)="login(loginForm.value)">
+  <input type="text" name="name" ngModel>
+  <br/>
+  <input type="password" name="password" ngModel>
+  <br/>
+  <button>Login</button>
+</form>
+<button (click)="login(loginForm.value)">Out</button>

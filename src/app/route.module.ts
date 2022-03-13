@@ -5,11 +5,11 @@ import { ResDashComponent } from './components/res-dash/res-dash.component';
 
 const route: Routes = [
   {
-    path: '',
+    path: 'home',
     component: ResDashComponent
   },
   {
-    path: 'home',
+    path: '',
     component: HomeComponent
   }
 ]
