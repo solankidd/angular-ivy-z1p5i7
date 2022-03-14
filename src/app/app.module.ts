@@ -7,6 +7,7 @@ import { HttpClientModule } from '@angular/common/http';
 import { AppComponent } from './app.component';
 import { HomeComponent } from './components/home/home.component';
 import { ResDashComponent } from './components/res-dash/res-dash.component';
+import { HighDirective } from './high.directive';
 
 @NgModule({
   imports: [
@@ -19,7 +20,8 @@ import { ResDashComponent } from './components/res-dash/res-dash.component';
   declarations: [
     AppComponent,
     HomeComponent,
-    ResDashComponent
+    ResDashComponent,
+    HighDirective
   ],
   bootstrap: [AppComponent]
 })
